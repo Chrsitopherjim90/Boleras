@@ -1,0 +1,64 @@
+using lib_dominio.Entidades;
+using lib_repositorios.Interfaces;
+using lib_repositorios.Implementaciones;
+using Microsoft.EntityFrameworkCore;
+using ut_presentacion.Nucleo;
+
+namespace ut_presentacion.Repositorios
+{
+    [TestClass]
+    public class TorneoPrueba
+    {
+        private readonly IConexion? iConexion;
+        private List<Torneo>? lista;
+        private Torneo? entidad;
+
+        public TorneoPrueba()
+        {
+            iConexion = new Conexion();
+            iConexion.StringConexion = Configuracion.ObtenerValor("StringConexion");
+        }
+
+        [TestMethod]
+        public void Ejecutar()
+        {
+            Assert.AreEqual(true, Guardar());
+            Assert.AreEqual(true, Modificar());
+            Assert.AreEqual(true, Listar());
+            Assert.AreEqual(true, Borrar());
+        }
+
+        public bool Listar()
+        {
+            this.lista = this.iConexion!.Torneos!.ToList();
+            return lista.Count > 0;
+        }
+
+        public bool Guardar()
+        {
+            this.entidad = new Torneo()
+            {
+                // TODO: Asignar propiedades iniciales
+            };
+            this.iConexion!.Torneos!.Add(this.entidad);
+            this.iConexion!.SaveChanges();
+            return true;
+        }
+
+        public bool Modificar()
+        {
+            // TODO: Cambiar alguna propiedad
+            var entry = this.iConexion!.Entry<Torneo>(this.entidad);
+            entry.State = EntityState.Modified;
+            this.iConexion!.SaveChanges();
+            return true;
+        }
+
+        public bool Borrar()
+        {
+            this.iConexion!.Torneos!.Remove(this.entidad!);
+            this.iConexion!.SaveChanges();
+            return true;
+        }
+    }
+}
