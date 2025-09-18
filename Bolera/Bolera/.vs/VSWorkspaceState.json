@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\lib_dominio",
+    "\\lib_dominio\\bin",
+    "\\lib_dominio\\bin\\Debug",
+    "\\lib_dominio\\Entidades",
+    "\\lib_dominio\\Nucleo",
+    "\\lib_repositorio",
+    "\\lib_repositorio\\Implementaciones"
+  ],
+  "SelectedNode": "\\lib_repositorio\\Implementaciones\\Empleados_RolEmpleados.cs",
+  "PreviewInSolutionExplorer": false
+}

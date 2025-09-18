@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Bolera",
+    "\\Bolera\\lib_dominio",
+    "\\Bolera\\lib_dominio\\Entidades",
+    "\\Bolera\\lib_dominio\\Nucleo",
+    "\\Bolera\\lib_repositorio",
+    "\\Bolera\\lib_repositorio\\bin",
+    "\\Bolera\\lib_repositorio\\Implementaciones",
+    "\\Bolera\\lib_repositorio\\Interfaces"
+  ],
+  "SelectedNode": "\\Bolera\\lib_repositorio\\Interfaces\\IFacturas.cs",
+  "PreviewInSolutionExplorer": false
+}
